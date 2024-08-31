@@ -1,0 +1,222 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.coverImg {
+  width: 100%;
+  overflow: hidden;
+}
+
+.coverImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.coverImage:hover {
+  transform: scale(1.05);
+}
+
+.details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  text-align: center; 
+}
+
+.bookTitle {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.bookTitle a {
+  text-decoration: none; 
+  color: inherit; 
+  transition: color 0.3s;
+}
+
+.bookTitle a:hover {
+  color: #3498db; 
+}
+
+.authorName {
+  font-size: 1em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.price {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #e67e22;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px solid #ecf0f1;
+}
+
+.iconLink,
+.iconAddCart {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #2980b9;
+  transition: color 0.3s;
+  margin: 0 20px;
+}
+
+.iconLink:hover,
+.iconAddCart:hover {
+  color: #3498db;
+}
+
+   
+ /* Book Details  */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; 
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 10% auto;
+}
+
+.bookDetails {
+  display: flex;
+  flex-direction: row; 
+  max-width: 100%;
+  width: 100%;
+}
+
+.bookImg {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.coverImage {
+  width: 100%;
+  height: auto;
+}
+
+.contents {
+  flex: 2;
+  position: relative;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.author {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.publisher {
+  margin-bottom: 0.5rem;
+}
+
+.releaseDate {
+  margin-bottom: 1rem;
+}
+.addCartButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0; 
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 20% auto;
+    max-width: 400px;
+
+  }
+
+  .bookDetails {
+    flex-direction: column;
+  }
+
+  .bookImg {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .contents {
+    margin-top: 0;
+    position: static; 
+  }
+
+  .addCartButton {
+    position: static;
+    margin-top: 20px;
+    width: auto; 
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 40% 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .author, .price, .publisher, .releaseDate {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.875rem;
+  }
+
+  .addCartButton {
+    padding: 0.5rem 1rem;
+  }
+}

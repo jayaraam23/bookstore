@@ -1,0 +1,99 @@
+.shirtContainer{
+  background-color: white;
+  width: 400px;
+  margin: 10% auto;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+}
+
+.shirtContainer img{
+  height: 250px;
+  width: 130px;
+  align-items: center;
+  position: absolute;
+}
+.brandName{
+  font-size: 16px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.priceTag{
+  font-size: 14px;
+  text-align: center;
+  color: #c0392b;
+}
+.iconContainer{
+  box-shadow: #333;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.Shirtcart{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+.details{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+
+}
+
+
+
+
+.container {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+  position: relative;
+}
+
+.button {
+  display: inline-block;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.button:hover {
+  background-color: #c0392b;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center;
+}
+
+.bookCard {
+  flex: 1 1 calc(33.333% - 20px); 
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .bookCard {
+    flex: 1 1 calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 768px) {
+  .bookCard {
+    flex: 1 1 100%; 
+  }
+}
+

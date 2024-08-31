@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+
+  # React service
+  ui:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+    # environment:
+      # - REACT_APP_BASE_URL=http://localhost:5000
+    ports:
+      - "80:3000"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  # Flask API service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:Admin#123@db:5432/bookstore
+    depends_on:
+      - db
+    networks:
+      - app-network
+    volumes:
+      - ./backend:/app
+
+  # PSQL DB service
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Admin#123
+      POSTGRES_DB: bookstore
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

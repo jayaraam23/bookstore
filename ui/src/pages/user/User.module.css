@@ -1,0 +1,164 @@
+
+.logoContainer {
+    text-align: center;
+  }
+  
+  .logoContainer img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .logoContainer .title {
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    color: #383838;
+  }
+  
+  .headerTitle {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .mainContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 10% auto;
+    max-width: 1000px;
+  }
+  
+  .imageContainer {
+    position: relative;
+    flex: 1;
+    margin-right: 20px;
+    width: 50%;
+  }
+  
+  .imagePadding {
+    padding-top: 56.25%;
+    width: 100%;
+  }
+  
+  .imageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+  
+  .imageWrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .formContainer {
+    flex: 1;
+    max-width: 500px;
+    margin-left: 20px;
+    padding: 20px;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .formGroup label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .formGroup input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .formGroup input:focus {
+    border-color: #000000;
+    outline: none;
+  }
+  
+  .submitButton {
+    width: 50%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 3px solid white;
+  }
+
+  .submitButton1 {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 3px solid white;
+  }
+  
+  .submitButton:hover {
+    background-color: #929292;
+  }
+
+  .centeredText {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  .link {
+    text-decoration: none; 
+    color: white; 
+  }
+  
+
+  @media (max-width: 1000px) {
+    .mainContainer {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+}
+  
+  @media (max-width: 800px) {
+    .mainContainer {
+      flex-direction: column;
+      align-items: center;
+      width: max-content;
+      margin: 10% auto;
+    }
+  
+    .imageContainer {
+      display: none;
+    }
+  
+    .formContainer {
+      margin-left: 0;
+      max-width: 90%;
+    }
+  }
+  
